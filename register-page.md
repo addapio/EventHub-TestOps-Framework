@@ -1,0 +1,25 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]
+        - heading "Start Practising Like a Pro QA Engineer Today" [level=2] [ref=e9]: Start PractisingLike a Pro QAEngineer Today
+        - paragraph [ref=e10]: Create your free sandbox account and get instant access to a full-stack practice app with real APIs, auth flows, and booking scenarios.
+        - list [ref=e11]
+        - generic [ref=e24]
+      - generic [ref=e35]:
+        - paragraph [ref=e36]: 50,000+
+        - paragraph [ref=e37]: QA engineers trained worldwide
+    - generic [ref=e39]:
+      - link "API Documentation (Swagger)" [ref=e40] [cursor=pointer]:
+        - /url: https://api.eventhub.rahulshettyacademy.com/api/docs
+      - generic [ref=e43]:
+        - generic [ref=e44]
+        - generic [ref=e50]
+        - paragraph [ref=e74]
+      - paragraph [ref=e76]:
+        - text: A practice environment by
+        - link "RahulShettyAcademy.com" [ref=e77] [cursor=pointer]:
+          - /url: https://rahulshettyacademy.com
+        - text: — used by QA engineers worldwide to master automation testing.
+  - alert [ref=e78]
