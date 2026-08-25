@@ -1,0 +1,4 @@
+19. [POST] https://api.eventhub.rahulshettyacademy.com/api/auth/register => [201] Created
+29. [POST] https://api.eventhub.rahulshettyacademy.com/api/auth/register => [400] Bad Request
+
+Note: 20 static requests not shown, run with "static" option to see them.
