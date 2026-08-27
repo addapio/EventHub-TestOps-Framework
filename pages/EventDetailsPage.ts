@@ -27,9 +27,9 @@ export class EventDetailsPage {
     const button = delta > 0 ? this.increaseButton : this.decreaseButton;
     for (let index = 0; index < Math.abs(delta); index += 1) {
       const currentQuantity = Number(await this.quantity.textContent());
-      await button.click({ force: true });
+      await button.click();
       await expect(this.quantity).toHaveText(String(currentQuantity + Math.sign(delta)));
     }
   }
-  async confirmBooking(): Promise<void> { await this.confirmBookingButton.dispatchEvent('click'); }
+  async confirmBooking(): Promise<void> { await this.confirmBookingButton.click(); }
 }

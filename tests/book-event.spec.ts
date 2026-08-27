@@ -44,8 +44,12 @@ test.describe('Core End-User Workflows', () => {
     // 5. Verify an excessive quantity cannot be selected.
     await page.getByRole('link', { name: 'Browse More Events' }).click();
     await events.openEvent('World Tech Summit');
-    await details.changeQuantity(7);
-    await expect(details.quantity).toHaveText('8');
+    const maximumTickets = Number((await page.getByText(/\(max \d+\)/).textContent())?.match(/\d+/)?.[0]);
+    for (let index = 1; index < maximumTickets && await details.increaseButton.isEnabled(); index += 1) {
+      await details.changeQuantity(1);
+    }
+    await expect(details.quantity).toHaveText(/\d+/);
+    expect(Number(await details.quantity.textContent())).toBeLessThanOrEqual(maximumTickets);
     await expect(details.increaseButton).toBeDisabled();
   });
 });

@@ -23,6 +23,6 @@ export class EventsPage {
     await this.citySelect.selectOption({ label: city });
   }
   async openEvent(name: string): Promise<void> {
-    await this.page.getByRole('article').filter({ hasText: name }).getByTestId('book-now-btn').dispatchEvent('click');
+    await this.page.getByRole('article').filter({ hasText: name }).getByTestId('book-now-btn').click();
   }
 }
